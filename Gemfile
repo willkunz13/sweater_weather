@@ -28,6 +28,7 @@ gem 'figaro'
 gem 'faraday'
 gem 'pry'
 gem 'fast_jsonapi'
+gem 'sidekiq'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -37,6 +38,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 	gem 'rspec-rails'
 	gem 'simplecov'
+	gem 'webmock'
+	gem 'vcr'
 end
 
 group :development do
