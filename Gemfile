@@ -29,6 +29,7 @@ gem 'faraday'
 gem 'pry'
 gem 'fast_jsonapi'
 gem 'sidekiq'
+gem 'bcrypt'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
