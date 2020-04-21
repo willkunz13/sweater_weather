@@ -5,7 +5,7 @@ class ImageService
 	end
 
 	def response
-		answer = get_json[:results].first[:urls][:raw]
+		get_json[:results].first[:urls][:raw]
 	end
 
 	private
