@@ -1,24 +1,58 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Backend API with 4 Endpoints:
 
-Things you may want to cover:
+**1. Weather for a city with background image included:**
 
-* Ruby version
+get /api/vi/forecast?location=\<location\>
 
-* System dependencies
+example:
 
-* Configuration
+/api/v1/forecast?location=denver,co
 
-* Database creation
+**2. Register for api key**
 
-* Database initialization
+post /api/v1/users
 
-* How to run the test suite
+must include email, password, and password_confirmation params
 
-* Services (job queues, cache servers, search engines, etc.)
+example:
 
-* Deployment instructions
+parameters = {
+  email: "whatever@example.com",
+  password: "password",
+  password_confirmation: "password"
+}
+    post '/api/v1/users', :params => parameters
+    
+**3. login to retrieve api key if already registered**
 
-* ...
+get /api/v1/sessions
+
+must include correct email and password params
+
+example:
+
+parameters = {
+  email: "whatever@example.com",
+  password: "password",
+}
+
+get '/api/v1/sessions', :params => parameters
+
+**4. Time to destination and travel at location **
+
+note: must pass an api_key param to access, so register must be completed first
+
+post '/api/v1/road_trip
+
+example:
+
+parameters = {
+  origin: "Denver,CO",
+  destination: "Pueblo,CO",
+  api_key: "jgn983hy48thw9begh98h4539h4"
+}
+
+post '/api/v1/road_trip', :params => parameters
+
