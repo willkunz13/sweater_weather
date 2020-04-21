@@ -1,5 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe FetchImageJob, type: :job do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe FetchImageJob, :vcr, type: :job do
+	it 'perform' do
+		expect(FetchImageJob.perform_now('denver,co')).to be_a(String)
+	end
 end

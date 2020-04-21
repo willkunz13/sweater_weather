@@ -6,7 +6,7 @@ class WeatherService
 	end
 
 	def response
-		Cumulative.new(get_json)
+		Forecast.new(get_json)
 	end
 
 	def there_weather
@@ -19,7 +19,7 @@ class WeatherService
 	private
 
 	def get_json
-    response = conn.get("/data/2.5/onecall?lat=#{@lat}&lon=#{@lon}&appid=#{ENV['WEATHER_API_KEY']}")
+    response = conn.get("/data/2.5/onecall?lat=#{@lat}&lon=#{@lon}&units=imperial&appid=#{ENV['WEATHER_API_KEY']}")
     JSON.parse(response.body, symbolize_names: true)
   end
 
