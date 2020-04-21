@@ -18,12 +18,12 @@ must include email, password, and password_confirmation params
 
 example:
 
-parameters = {
-  email: "whatever@example.com",
-  password: "password",
-  password_confirmation: "password"
-}
-    post '/api/v1/users', :params => parameters
+parameters = {  
+  email: "whatever@example.com",  
+  password: "password",  
+  password_confirmation: "password"  
+}. 
+post '/api/v1/users', :params => parameters
     
 **3. login to retrieve api key if already registered **
 
@@ -33,12 +33,12 @@ must include correct email and password params
 
 example:
 
-parameters = {
-  email: "whatever@example.com",
-  password: "password",
-}
+parameters = {  
+  email: "whatever@example.com",  
+  password: "password",  
+}. 
 
-get '/api/v1/sessions', :params => parameters 
+get '/api/v1/sessions', :params => parameters  
 
 
  **4. Time to destination and travel at location **
