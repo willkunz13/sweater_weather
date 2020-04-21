@@ -6,7 +6,7 @@ class WeatherService
 	end
 
 	def response
-		Cumulative.new(get_json)
+		Forecast.new(get_json)
 	end
 
 	def there_weather
