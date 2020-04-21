@@ -16,6 +16,6 @@ class GeoService
   end
 
   def conn
-		Faraday.get("https://maps.googleapis.com/maps/api/geocode/json?address=denver,co&key=#{ENV['GOOGLE_API_KEY']}")
+		Faraday.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{@location}&key=#{ENV['GOOGLE_API_KEY']}")
   end
 end

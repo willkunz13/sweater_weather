@@ -9,6 +9,13 @@ class WeatherService
 		Cumulative.new(get_json)
 	end
 
+	def there_weather
+		weather = get_json
+		temp = weather[:current][:temp]
+		summary = weather[:current][:weather].first[:description]
+		ArrivalForecast.new(temp, summary)
+	end
+
 	private
 
 	def get_json
