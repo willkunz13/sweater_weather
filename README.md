@@ -22,7 +22,7 @@ parameters = {
   email: "whatever@example.com",  
   password: "password",  
   password_confirmation: "password"  
-}. 
+}  
 post '/api/v1/users', :params => parameters
     
 **3. login to retrieve api key if already registered**
@@ -36,7 +36,7 @@ example:
 parameters = {  
   email: "whatever@example.com",  
   password: "password",  
-}. 
+}  
 
 get '/api/v1/sessions', :params => parameters  
 
