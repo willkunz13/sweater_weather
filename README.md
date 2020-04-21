@@ -38,7 +38,8 @@ parameters = {
   password: "password",
 }
 
-get '/api/v1/sessions', :params => parameters
+get '/api/v1/sessions', :params => parameters 
+
 
 **4. Time to destination and travel at location **
 
